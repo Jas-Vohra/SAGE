@@ -6,7 +6,7 @@ SAGE is a daily two-minute health check for astronauts, with a view for the medi
 
 Team Snoopy's O2 · NASA Space Apps Challenge 2026 · Challenge: *Create Health Monitoring Software for Astronauts on Space Missions*
 
-**Live demo:** [add your Netlify link here] · **Evidence:** [how we tested SAGE on real NASA data](VALIDATION.md)
+**Live demo:** https://lighthearted-capybara-6920c9.netlify.app · **Evidence:** [how we tested SAGE on real NASA data](VALIDATION.md)
 
 ![SAGE showing a 3D body and a check result with four answers](screenshot.jpg)
 
