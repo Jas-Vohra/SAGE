@@ -1,0 +1,428 @@
+{
+ "data": {
+  "source": "NASA OSDR OSD-569 + OSD-575 (Inspiration4, Sept 2021, 3-day flight)",
+  "astronauts": 4,
+  "visits": [
+   "L-92",
+   "L-44",
+   "L-3",
+   "R+1",
+   "R+45",
+   "R+82",
+   "R+194"
+  ],
+  "markers": 32,
+  "measurements_used": 894,
+  "simulated_values": 0
+ },
+ "method": "Leave-one-astronaut-out. Shift learned from 3 astronauts, tested on the 4th, repeated 4 times.",
+ "held_out_predictions": 128,
+ "forecast_error_pct": {
+  "M1_baseline_only": 20.73,
+  "M2_SAGE_shrunk_shift": 19.98,
+  "M2u_unshrunk_shift": 21.9,
+  "note": "Mean absolute log error x 100, about equal to the average % miss on the held-out astronaut's R+1 value."
+ },
+ "markers_where_model_beats_baseline": {
+  "M2_SAGE": [
+   14,
+   32
+  ],
+  "M2u_unshrunk": [
+   15,
+   32
+  ]
+ },
+ "interval_coverage_95": {
+  "M1_baseline_only": 0.711,
+  "M1c_calibrated_baseline": 0.836,
+  "M2_SAGE": 0.938,
+  "M2u_unshrunk": 0.938,
+  "note": "Share of held-out R+1 values inside the 95% expected band. Closer to 0.95 = honest uncertainty."
+ },
+ "alerts_on_return_day": {
+  "M0_outside_lab_range": [
+   5,
+   128
+  ],
+  "M1_beyond_personal_baseline": [
+   37,
+   128
+  ],
+  "M1c_beyond_calibrated_baseline": [
+   21,
+   128
+  ],
+  "M2_beyond_SAGE_expected": [
+   8,
+   128
+  ]
+ },
+ "ground_null_test": {
+  "what": "L-92 and L-44 predict L-3. No flight happened, so every alert here is a false alert.",
+  "personal_baseline_false_alerts_EFLM_only": [
+   39,
+   128
+  ],
+  "personal_baseline_false_alerts_SAGE_calibrated": [
+   20,
+   128
+  ],
+  "lab_range_flags_on_ordinary_day": [
+   9,
+   128
+  ]
+ },
+ "return_day_changes_beyond_personal_baseline": [
+  14,
+  128
+ ],
+ "recovery_within_personal_baseline": {
+  "R+45": [
+   105,
+   127
+  ],
+  "R+82": [
+   118,
+   128
+  ],
+  "R+194": [
+   114,
+   127
+  ]
+ },
+ "largest_learned_shifts": [
+  {
+   "marker": "C-reactive protein (multiplex)",
+   "shift_pct": 107.72,
+   "weight": 0.978
+  },
+  {
+   "marker": "Interleukin-6 (multiplex)",
+   "shift_pct": 78.08,
+   "weight": 0.931
+  },
+  {
+   "marker": "Haptoglobin (multiplex)",
+   "shift_pct": 41.66,
+   "weight": 0.591
+  },
+  {
+   "marker": "Lymphocytes",
+   "shift_pct": -22.18,
+   "weight": 0.847
+  },
+  {
+   "marker": "TNF-alpha (multiplex)",
+   "shift_pct": 25.53,
+   "weight": 0.78
+  },
+  {
+   "marker": "Glucose",
+   "shift_pct": 23.08,
+   "weight": 0.943
+  },
+  {
+   "marker": "Neutrophils",
+   "shift_pct": 18.44,
+   "weight": 0.433
+  },
+  {
+   "marker": "Fibrinogen (multiplex)",
+   "shift_pct": -14.41,
+   "weight": 0.597
+  }
+ ],
+ "data_quality_findings": {
+  "lab_range_changed_between_visits_same_person": [
+   {
+    "analyte": "rbc",
+    "label": "Red blood cells",
+    "crew": "C003",
+    "ranges": [
+     [
+      4.2,
+      5.8
+     ],
+     [
+      4.2,
+      5.8
+     ],
+     [
+      4.2,
+      5.8
+     ],
+     [
+      3.8,
+      5.1
+     ],
+     [
+      3.8,
+      5.1
+     ],
+     [
+      3.8,
+      5.1
+     ],
+     [
+      3.8,
+      5.1
+     ]
+    ]
+   },
+   {
+    "analyte": "hemoglobin",
+    "label": "Hemoglobin",
+    "crew": "C003",
+    "ranges": [
+     [
+      13.2,
+      17.1
+     ],
+     [
+      13.2,
+      17.1
+     ],
+     [
+      13.2,
+      17.1
+     ],
+     [
+      11.7,
+      15.5
+     ],
+     [
+      11.7,
+      15.5
+     ],
+     [
+      11.7,
+      15.5
+     ],
+     [
+      11.7,
+      15.5
+     ]
+    ]
+   },
+   {
+    "analyte": "hematocrit",
+    "label": "Hematocrit",
+    "crew": "C003",
+    "ranges": [
+     [
+      38.5,
+      50
+     ],
+     [
+      38.5,
+      50
+     ],
+     [
+      38.5,
+      50
+     ],
+     [
+      35,
+      45
+     ],
+     [
+      35,
+      45
+     ],
+     [
+      35,
+      45
+     ],
+     [
+      35,
+      45
+     ]
+    ]
+   },
+   {
+    "analyte": "creatinine",
+    "label": "Creatinine",
+    "crew": "C003",
+    "ranges": [
+     [
+      0.6,
+      1.35
+     ],
+     [
+      0.6,
+      1.35
+     ],
+     [
+      0.6,
+      1.35
+     ],
+     [
+      0.5,
+      1.1
+     ],
+     [
+      0.5,
+      1.1
+     ],
+     [
+      0.5,
+      1.1
+     ],
+     [
+      0.5,
+      1.1
+     ]
+    ]
+   },
+   {
+    "analyte": "calcium",
+    "label": "Calcium",
+    "crew": "C003",
+    "ranges": [
+     [
+      8.6,
+      10.3
+     ],
+     [
+      8.6,
+      10.3
+     ],
+     [
+      8.6,
+      10.3
+     ],
+     [
+      8.6,
+      10.2
+     ],
+     [
+      8.6,
+      10.2
+     ],
+     [
+      8.6,
+      10.2
+     ],
+     [
+      8.6,
+      10.2
+     ]
+    ]
+   },
+   {
+    "analyte": "alp",
+    "label": "Alkaline phosphatase",
+    "crew": "C003",
+    "ranges": [
+     [
+      36,
+      130
+     ],
+     [
+      36,
+      130
+     ],
+     [
+      36,
+      130
+     ],
+     [
+      31,
+      125
+     ],
+     [
+      31,
+      125
+     ],
+     [
+      31,
+      125
+     ],
+     [
+      31,
+      125
+     ]
+    ]
+   },
+   {
+    "analyte": "ast",
+    "label": "AST",
+    "crew": "C003",
+    "ranges": [
+     [
+      10,
+      40
+     ],
+     [
+      10,
+      40
+     ],
+     [
+      10,
+      40
+     ],
+     [
+      10,
+      30
+     ],
+     [
+      10,
+      30
+     ],
+     [
+      10,
+      30
+     ],
+     [
+      10,
+      30
+     ]
+    ]
+   },
+   {
+    "analyte": "alt",
+    "label": "ALT",
+    "crew": "C003",
+    "ranges": [
+     [
+      9,
+      46
+     ],
+     [
+      9,
+      46
+     ],
+     [
+      9,
+      46
+     ],
+     [
+      6,
+      29
+     ],
+     [
+      6,
+      29
+     ],
+     [
+      6,
+      29
+     ],
+     [
+      6,
+      29
+     ]
+    ]
+   }
+  ],
+  "hemoglobin_unit": "OSD-569 transformed header says 'percent'; the original submitted file says g/dL. g/dL used."
+ },
+ "limits": [
+  "4 astronauts, one 3-day commercial flight: not long-duration ISS, Moon or Mars.",
+  "Blood tests only (no daily vitals are public for these crew).",
+  "No clinical diagnosis labels exist, so this measures prediction and alert behaviour, not disease detection.",
+  "CVA = CVI/2 is an assumption (desirable analytical performance), not the lab's measured imprecision.",
+  "EFLM within-person variation alone was too narrow for these crew and assays (see ground null test), so SAGE calibrates it on the crew's own pre-flight repeats (prior weight NU0 = 4 df, a stated setting)."
+ ]
+}
