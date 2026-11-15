@@ -55,7 +55,7 @@ Full method, a worked example and the limits are in **[VALIDATION.md](VALIDATION
 - **Languages:** [e.g. HTML, CSS, JavaScript, Python]
 - **Libraries:** [e.g. 3D library for the body model, charting library]
 - **Data:** NASA OSDR (OSD-569, OSD-575, ISS dosimetry), NASA DONKI, NASA ISS Live, NASA-STD-3001, NASA Human Research Program
-- **Tools:** GitHub, Netlify (hosting), Visual Studio COde
+- **Tools:** GitHub, Netlify (hosting), Visual Studio Code
 
 ## Files
 
