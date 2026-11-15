@@ -16,7 +16,7 @@ Open the live demo, or download `SAGE.html` and double-click it: the whole app i
 
 ## The problem
 
-- A message between Mars and Earth takes up to 24 minutes each way, so the astronaut is the first doctor.
+- A message between Mars and Earth takes up to 22 minutes each way, so the astronaut is the first doctor.
 - Space changes the body in ways that look like illness: about 70% of astronauts get space motion sickness in the first 72 hours.
 - One "normal range" for everyone fails: it raises alarms for normal space changes and misses a change that is big for one person.
 
