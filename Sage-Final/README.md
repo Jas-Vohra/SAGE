@@ -59,6 +59,10 @@ Full method, a worked example and the limits are in **[VALIDATION.md](VALIDATION
 
 SAGE is a research prototype that supports the medical crew; it is not a diagnosis or a medical device. The blood test covers 4 astronauts on one 3-day flight. Organ effects of space radiation come mostly from animal studies.
 
+## Use of AI
+
+We used Claude (Anthropic) as an AI coding assistant to help and debug parts of the code. The idea, the "space normal" approach, the choice of NASA datasets, the validation test and all final decisions were made by our team, and we reviewed and tested all AI-assisted code ourselves.
+
 ## Team Snoopy's O2
 
 Shreya (team leader, space researcher) · Jas (coder and AI engineer) · Shreyash (full-stack developer) · Ishika (UI/UX and visualization designer) · Shatakshi (data scientist and analyst)
