@@ -1,6 +1,6 @@
 # SAGE: Self-Assessment Guide for Explorers
 
-**On Mars, the nearest doctor is up to 24 minutes away. SAGE gives an astronaut an answer in about 2.**
+**On Mars, the nearest doctor is up to 44 minutes away. SAGE gives an astronaut an answer in about 2.**
 
 SAGE is a daily two-minute health check for astronauts, with a view for the medical crew. It learns each astronaut's own normal, knows what is expected on each mission day, and works with no internet.
 
