@@ -2,7 +2,7 @@
 
 **On Mars, the nearest doctor is up to 44 minutes away. SAGE gives an astronaut an answer in about 2.**
 
-SAGE is a daily two-minute health check for astronauts, with a view for the medical crew. It learns each astronaut's own normal, knows what is expected on each mission day, and works with no internet.
+SAGE is a daily two-minute health check for astronauts, for the benefit of the medical crew. It learns each astronaut’s own normal, knows what to expect on each mission day and works with no internet.
 
 Team Snoopy's O2 · NASA Space Apps Challenge 2026 · Challenge: *Create Health Monitoring Software for Astronauts on Space Missions*
 
@@ -16,13 +16,13 @@ Open the live demo, or download `SAGE.html` and double-click it: the whole app i
 
 ## The problem
 
-- A message between Mars and Earth takes up to 22 minutes each way, so the astronaut is the first doctor.
+- The message between Mars and Earth takes up to 22 minutes each way, so the astronaut is the first doctor.
 - Space changes the body in ways that look like illness: about 70% of astronauts get space motion sickness in the first 72 hours.
-- One "normal range" for everyone fails: it raises alarms for normal space changes and misses a change that is big for one person.
+- One “normal range” for everyone fails. It triggers alarms for normal space changes and misses a change that is big for one person.
 
 ## What SAGE does
 
-After every check, SAGE gives four separate answers, then explains what happened, the possible causes (with sources) and what to do now, in 30 minutes and later today. It never diagnoses or doses a medicine.
+ SAGE gives four different answers after each check, then tells you what happened, possible causes (with sources) and what to do now at designated time intervals. It never diagnoses, or dose medicine.
 
 | # | Question | How SAGE answers |
 |---|---|---|
@@ -46,22 +46,33 @@ Full method, a worked example and the limits are in **[VALIDATION.md](VALIDATION
 | Every prediction | [`results/predictions.csv`](results/predictions.csv) and [`results/null_test.csv`](results/null_test.csv) |
 | Re-run it (Python 3) | `python3 analysis/train_real.py` then `python3 analysis/export_predictions.py` |
 
+## Technical approach
+- **Bayesian personal baseline:** a prior is used to initialize each astronaut’s normal, which is updated for each check. The range is wide and it narrows as SAGE learns the individual.
+- **Space-adjusted 95% range:** range = personal baseline + day-to-day variation + expected change for the current flight day (from published spaceflight research).
+- **Four independent checks:** clinical rules, space-normal comparison, data-quality checks and self-report vs. objective-signs check combine into one of four levels (Routine, Recheck, Contact medical crew, Urgent).
+  
+## Built with
+- **Languages:** [e.g. HTML, CSS, JavaScript, Python]
+- **Libraries:** [e.g. 3D library for the body model, charting library]
+- **Data:** NASA OSDR (OSD-569, OSD-575, ISS dosimetry), NASA DONKI, NASA ISS Live, NASA-STD-3001, NASA Human Research Program
+- **Tools:** GitHub, Netlify (hosting), Visual Studio COde
+
 ## Files
 
 | File | What it is |
 |---|---|
-| `SAGE.html` | The whole app in one file |
-| `VALIDATION.md` | How we tested SAGE on real NASA data |
-| `results/` | The test results: every prediction and every number in our slides |
-| `analysis/` | The test code and the real Inspiration4 blood values it uses |
+| `SAGE.html` | The whole app in present in this one file |
+| `VALIDATION.md` | How we have tested SAGE on real NASA resources |
+| `results/` | The test results, every prediction and every number is present in our slides |
+| `analysis/` | The test code and the real Inspiration4 blood data and values SAGE uses |
 
 ## Limits
 
-SAGE is a research prototype that supports the medical crew; it is not a diagnosis or a medical device. The blood test covers 4 astronauts on one 3-day flight. Organ effects of space radiation come mostly from animal studies.
+SAGE is a research prototype for the medical crew, not a diagnosis or medical device. Blood test for 4 astronauts on a 3-day flight. The organ effects of space radiation are mainly from animal studies.
 
 ## Use of AI
 
-We used Claude (Anthropic) as an AI coding assistant to help and debug parts of the code. The idea, the "space normal" approach, the choice of NASA datasets, the validation test and all final decisions were made by our team, and we reviewed and tested all AI-assisted code ourselves.
+We used the AI coding assistant Claude (Anthropic) to help debug parts of the code. We conceived the idea, the “space normal” method, the choice of NASA datasets, the validation test and all final decisions. We reviewed and tested all AI-assisted code ourselves.
 
 ## Team Snoopy's O2
 
