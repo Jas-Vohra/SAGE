@@ -1,6 +1,7 @@
 # How we tested SAGE on real NASA astronaut data
 
-**Short answer:** we hid one astronaut at a time and asked SAGE to predict their blood values on the day after landing, using only what it learned from the other three. SAGE's "95% range" caught **120 of 128** real values (93.8%), against **91 of 128** (71.1%) for the astronaut's own pre-flight average alone. On an ordinary pre-flight day, calibration cut false alarms from **39 to 20** of 128.
+
+**Short answer:** we hid one astronaut at a time and asked SAGE to predict their blood values on the day after landing, using only the information it had gathered from the other three. SAGE's "95% range" picked up 120 of the 128 actual values (93.8%) as opposed to 91 of the 128 (71.1%) from the astronaut's own pre-flight average. On a normal pre-flight day the calibration would have reduced the number of false alarms from 39 to 20 out of 128.
 
 Everything below can be re-run with one command (see [Reproduce it](#reproduce-it-yourself)).
 
