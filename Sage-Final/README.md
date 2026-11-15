@@ -52,8 +52,8 @@ Full method, a worked example and the limits are in **[VALIDATION.md](VALIDATION
 - **Four independent checks:** clinical rules, space-normal comparison, data-quality checks and self-report vs. objective-signs check combine into one of four levels (Routine, Recheck, Contact medical crew, Urgent).
   
 ## Built with
-- **Languages:** [e.g. HTML, CSS, JavaScript, Python]
-- **Libraries:** [e.g. 3D library for the body model, charting library]
+- **Languages:**  HTML, CSS, JavaScript, Python
+- **Libraries:**  three.js 0.160.0 (3D body model), Lightstreamer Web Client 9.2.3 (live ISS cabin CO₂), esbuild 0.28.2 (offline build), Node.js (tests) and the Python standard library .
 - **Data:** NASA OSDR (OSD-569, OSD-575, ISS dosimetry), NASA DONKI, NASA ISS Live, NASA-STD-3001, NASA Human Research Program
 - **Tools:** GitHub, Netlify (hosting), Visual Studio Code
 
